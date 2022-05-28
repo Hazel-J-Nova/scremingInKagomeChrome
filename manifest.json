@@ -1,0 +1,33 @@
+{
+    "name":"screaming in Kagome",
+    "description":"add screaming in Kagome reaction in Marked For Death",
+    "version":"1.0",
+    "manifest_version": 3,
+     "background":{
+      "service_worker":"background.js"
+  },
+      "permissions":["storage", "tabs","scripting","declarativeContent"],
+
+  "host_permissions":["https://*.forums.sufficientvelocity.com/*"],
+  "content_scripts": [
+      {
+        "matches": ["https://*.forums.sufficientvelocity.com/*"],
+        "js": ["contentScript.js"]
+      }
+    ],
+        "web_accessible_resources": [
+      {
+        "resources": [
+          
+        ],
+        "matches": ["https://*.forums.sufficientvelocity.com/*"]
+      }
+    ],
+    
+   "action": {
+      "default_icon": { 
+      },
+      "default_title": "Screaming In Kagome",
+      "default_popup": "popup.html"
+    }
+}
